@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+}
+.margin{
+    margin: 30px;
+}
+/* a */
+.grid-a{
+    display: grid;
+    grid-template-columns: 200px 75px;
+}
+.px200{
+    background-color: plum;
+}
+.px75{
+    background-color: lightblue;
+}
+/* b */
+.grid-b{
+    display: grid;
+    grid-template-columns: 50px 1fr 75px;
+}
+.blue{
+    background-color: lightblue;
+}
+.plum{
+    background-color: plum;
+}
+/* c */
+.grid-c{
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+/* 11-d */
+.card-grid{
+    align-items: center;
+    font-family: arial;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 300px 300px 300px; */
+    column-gap: 20px;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.picture{
+    /* width: 300px;
+    height:300px; */
+    height:350px;
+    width: 100%; 
+    object-fit: cover;
+}
+.object-right{
+    object-position: right;
+}
+.name{
+    margin-left: 15px;
+}
+.mutual-friends-row{
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;    
+    column-gap: 15px;
+}
+.avatar{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+.amount-of-friends{
+    font-size: 25px;
+    color:gray;    
+}
+.add-friend{
+    margin: 0 15px 10px 15px;
+    width:120px;
+    height: 40px;
+    border:none;
+    background-color: rgb(61, 102, 224);
+    color:rgb(255, 255, 255);
+    font-size:15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-friend:hover{
+    background-color: rgb(49, 84, 188);
+}

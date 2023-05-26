@@ -1,0 +1,55 @@
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  height: 2000px;
+}
+
+/* a */
+.sidebar-a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: green;
+  color: aliceblue;
+  z-index: 3;
+}
+.sidebar-b{
+  position: fixed;
+  bottom:0;
+  right:0;
+  top:0;
+  background-color: lightblue;
+  color: aliceblue;
+  width:150px;
+  z-index: 2;
+}
+.overlay{
+  background-color: black;
+  z-index: 5;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 350px;
+  border-radius: 8px;
+  padding: 20px 20px 28px 20px;
+  font-family: arial;
+}
+p{
+  margin:15px 0;
+}
+button{
+  padding:4px 8px;
+}

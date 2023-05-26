@@ -1,0 +1,51 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: arial;
+} 
+body{
+  height: 3000px;
+  background-color: rgb(209, 209, 209);
+}
+
+.box{
+  display: flex;
+  position:fixed; 
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  top:0;
+  left:0;
+  right:0;
+  padding:10px 80px;
+}
+.user,
+.buttons-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar{
+  height: 50px;
+  width:50px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.name{
+  font-weight: bold;
+  margin-left: 10px;
+}
+button{
+  margin-left: 8px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.add-friend{
+  background-color: rgb(68, 136, 255);
+  color:white;
+  font-weight: normal;
+}

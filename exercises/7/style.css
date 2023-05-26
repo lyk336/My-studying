@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cat{
+    height:300px;
+    margin: 10px 30px;
+}
+.cat-1{
+    border-radius: 5%;
+}
+.cat-2,
+.cat-3{
+    width: 300px;
+    object-fit: cover;
+}
+.cat-3{
+    border-radius: 50%;
+}
+.d{
+    margin-left: 30px;
+    display: block;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+.Google{
+    margin: 15px 0 0 30px;
+    font-size:16px;
+    padding: 0 12px;
+    height: 40px;
+    width: 400px;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+.Email-box{
+    border: 1px solid plum;
+    margin: 15px 0 0 30px;
+    padding: 15px 20px;
+    font-family: arial;
+    display: inline-block;
+    display:block;
+}
+.email-word{
+    color:gray;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.Email{
+    border-radius: 4px;
+    height: 30px;
+    width:300px;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.agreement{
+    margin: 10px 0;
+    font-size: 14;
+    color:gray;
+}
+.agree{
+    background-color: rgb(70, 102, 206);
+    height:40px;
+    width:400px;
+    color:white;
+    border: none;
+    border-radius: 20px;
+    vertical-align: center;
+    cursor: pointer;
+}
+
+.tweet{
+    display: inline-block;
+    padding: 30px; 
+    border:rgb(70, 102, 206) dotted 1px;
+    
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.tweeter-input{
+    height: 30px;
+    width: 300px;
+    border:none;
+    font-size: 16px;
+}
+.tweet-button{
+    height: 40px;
+    width: 100px;
+    border:none;
+    background-color: rgb(60, 177, 239);
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+}

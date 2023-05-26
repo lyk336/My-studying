@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+body{
+  background-color: rgb(220, 220, 220);
+  height: 3000px;
+}
+.server-avatar{
+  width:55px;
+  height: 55px;
+  border-radius: 30px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+.servers-images{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgb(34, 34, 34);
+  padding: 20px 10px;
+  left:0;
+  top:0;
+  bottom:0;
+  cursor: pointer;
+}
+.server-chats{
+  background-color: rgb(55, 55, 55);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left:75px;
+  width: 200px;
+  padding: 15px;
+}
+.category{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+p{
+  color:rgb(150, 150, 150);
+  cursor: pointer;
+
+}
+.add-channel{
+  font-size: 25px;
+}
+.category-name{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.channel-name{
+  margin-bottom: 20px;
+}

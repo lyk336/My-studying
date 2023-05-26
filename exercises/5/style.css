@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.Tahoma{
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.box{
+  margin: 10px 20px 10px 10px;
+  border: 1px dotted black;
+  width: 230px;
+  padding: 10px;
+}
+.b{
+  font-family: arial;
+  font-weight: bold;
+}
+.date{
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+  color: red
+}
+.c{
+  font-family: Verdana;
+  font-weight: bold;
+  margin: 0;
+  line-height: 15px;
+}
+.gray-text{
+  color: gray;
+  font-weight: normal;
+  font-size: 12px;
+}
+.c-description{
+  margin-top: 10px;
+}
+.d{
+  font-family:Arial;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+}
+.d-apple, 
+.d-description{
+  font-weight: normal;
+  font-size: 12px;
+}
+.d-description{
+  cursor: pointer;
+  color: blue;
+}
+/* 5e */
+
+.e, .f, .g{
+  font-family: Arial;
+  line-height: 20px;
+  text-align: center;
+}
+.box-e{
+  margin: 10px 20px 10px 10px;
+  border: 1px dotted black;
+  width: 300px;
+  padding: 10px;
+  padding-top: 0;
+}
+.new{
+  font-size: 10px;
+  color: orange;
+  font-weight: bold;
+}
+.MacBook{
+  font-weight: bold;
+}
+.e-description{
+  font-size: 24px;
+  font-weight: bold;
+}
+.e-price{
+  font-size: 10px;
+}
+.e-Buy{
+  color: white;
+  background-color: rgb(35, 179, 223);
+  width: 50px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 10px 125px 0 125px;
+  cursor: pointer;
+}
+.box-f{
+  margin: 10px 20px 10px 10px;
+  border: 1px dotted black;
+  width: 200px;
+  padding: 10px;
+  /* padding-top: 0; */
+}
+.num{
+  font-size: 20px;
+  font-weight: bold;
+}
+.USD{
+  font-size: 12px;
+}
+.new-value{
+  font-size: 12px;
+  color:rgb(20, 205, 72);
+}
+.f-description{
+  font-size: 12px;
+  color: gray;
+}
+.f-second-description{
+  color:red;
+}
+.box-g{
+  margin: 10px 20px 10px 10px;
+  border: 1px dotted black;
+  width: 500px;
+  padding: 10px;
+}
+.g, .f{
+  text-align: left;
+}
+.name{
+  font-weight: bold;
+  line-height: 24px;
+}
+.user{
+  color:grey;
+  font-weight: normal;
+  font-size: 12px;
+}
+.g-second-text{
+  line-height: 30px;
+}
+.mention{
+  color:lightskyblue; 
+}

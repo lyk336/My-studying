@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding: 0;
+}
+div{
+    margin:30px;
+}
+/* e */
+.tweet{
+    display: inline-block;
+    padding: 30px; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); 
+    margin: 30px;  
+    border-radius: 10px;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    object-position: right;
+}
+.tweeter-input{
+    height: 30px;
+    width: 300px;
+    border:none;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.tweet-button{
+    height: 40px;
+    width: 100px;
+    border:none;
+    background-color: rgb(60, 177, 239);
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* a */
+.square{
+    margin: 30px;
+    background-color: rgb(0, 0, 255);
+    width: 80px;
+    height: 80px;    
+}
+/* b */
+.circle{
+    background-color: rgb(0, 164, 0);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+/* c */
+.c-box{
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    display: inline-block;
+}
+.yes,
+.no{
+    margin-top: 20px;
+    margin-left: 5px;
+    padding: 2px 4px;
+}
+/* d */
+.YouTube-music{
+    margin-left: 0;
+    font-family: arial;
+    display:inline-block;
+    background-color: rgb(40, 40, 40);
+    height: 100px;
+    padding: 20px;
+    width: 360px;
+}
+.title{
+    color:rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+.subtitle{
+    color:rgb(125, 125, 125);
+    font-size: 16px;
+}
+/* f */
+.card{
+    display: inline-block;
+    font-family: arial;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.card-image{
+    width:250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: right;
+    transition: 0.15s;
+    vertical-align: middle;
+}
+.f-block{
+    margin:0;
+}
+.card-information{
+    margin:0;
+    padding: 15px 0 10px 10px;
+    transition: 0.15s;
+}
+
+.mutual-friends{
+    color:rgb(84, 84, 84);
+}
+.name,
+.mutual-friends{
+    cursor:default;
+}
+.add-friend,
+.add-fr{
+    margin-top:15px;
+    font-size: 15px;
+    color:rgb(255, 255, 255);
+    height: 35px;
+    width:115px;
+    border:none;
+    background-color:rgb(65, 115, 253);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.add-friend:hover{
+    background-color: rgb(34, 81, 210);
+}
+.add-friend:active{
+    opacity: 0.8;
+}
+.card:hover{
+    .card-information{
+        background-color: rgba(0,0,0,0.05);
+    }
+    .card-image{
+        filter:brightness(0.95)
+    }
+}
+/* g */
+/* 10-E */
+
+.card-box div{
+    margin: 0;
+}
+.card-box{
+    display: inline-block;
+    font-family: arial;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* images */
+.image{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: right;
+    padding-bottom: 10px;
+}
+/* card info */
+.card-name,
+.card-mutual-friends,
+.card-button{
+    padding-left: 15px;
+}
+.card-button{
+    padding-bottom: 10px;
+}
+
+/* object-position for both ex. */
+.cat1{
+    object-position: right;
+}
+.cat2{
+    object-position: center;
+}
+.cat3{
+    object-position: left;
+}
+/* ---------------------------- */
