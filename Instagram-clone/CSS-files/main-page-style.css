@@ -1,0 +1,168 @@
+*{
+  margin:0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* main redaction */
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+.title{
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.accounts-list{
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 438px;
+  padding: 16px;
+  row-gap: 16px;
+  cursor: pointer;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* avatar redacting */
+.avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  margin-right: 12px;
+}
+
+/* users short information */
+.user{
+  display: flex;
+}
+.name,
+.full-name{
+  font-size: 14px;
+}
+.cheked-mark{
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+.names-container{
+  font-size: 15px;
+  font-weight: 500;
+}
+.full-name,
+.popular{
+  color:#737373;
+  font-weight: 300;
+}
+.popular{
+  font-size: 12px;
+}
+
+/* follow button */
+.follow{
+  border:none;
+  border-radius: 8px;
+  background-color: #0095F6;
+  color:rgb(255, 255, 255);
+  font-weight:600;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.follow:hover{
+  background-color: #0073f6;
+}
+
+/* tooltip */
+.tooltip{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 366px;
+  height:306px;
+  padding: 16px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+}
+.photos{
+  display: flex;
+  justify-content: space-between;
+}
+.latest-photo{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+}
+.stat-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  text-align: center;
+}
+.stats-row{
+  display:flex;
+  justify-content: space-between;
+}
+.count{
+  font-weight: 700;
+}
+.count,
+.posts,
+.followers,
+.following{
+  font-size: 14px;
+}
+.tooltip .follow{
+  margin: 0 16px;
+}
+.tooltip a{
+  font-size: 16px;
+}
+.tooltip .avatar{
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+}
+.tooltip .user{
+  padding-left:16px; 
+}
+.tooltip .names-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.photos img:nth-child(2){
+  margin: 0 3px;
+}
+
+/* hover (hidding; possitions etc.) */
+.tooltip{
+  position: absolute;
+  z-index: 2;
+  top: 56px;
+  opacity: 0;
+  /* display: none; */
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.user:hover .tooltip{
+  /* display: flex; */
+  opacity: 1;
+}
+.position-higher{
+  top:unset;
+  bottom: 56px;
+}
+
