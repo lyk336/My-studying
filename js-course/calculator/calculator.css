@@ -1,0 +1,141 @@
+/* resets */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+body {
+  min-height: 100vh;
+  font-family: 'roboto', sans-serif;
+}
+:root {
+  --green: #3bbf42;
+}
+/* calculator styling */
+main {
+  display: flex;
+  flex-direction: column;
+
+  margin: 6em auto 0;
+  padding: 0 0.5em 0.75em;
+  border: 1px solid #333;
+  width: 16em;
+
+  border-radius: 1em;
+}
+
+/* calculator's display styling */
+
+.display {
+  display: flex;
+}
+input {
+  width: 100%;
+  margin: 1rem 0.5rem 0.75rem;
+  padding: 0.125em 0.25em;
+  border: 1px solid #333;
+
+  font-size: 2rem;
+  color: #333;
+  text-align: right;
+
+  border-radius: 0.25em;
+  cursor: default;
+}
+input:focus {
+  outline: none;
+  caret-color: rgba(255, 255, 255, 0);
+}
+input::placeholder {
+  color: #888;
+}
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+/* calculator's buttons styling */
+
+.buttons {
+  display: flex;
+  flex-direction: column-reverse;
+
+  padding: 0.25em 0.5em;
+}
+.buttons__row {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0.25em 0;
+}
+button {
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  background-color: #f0f0f0;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+
+  border-radius: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button--equivalent {
+  background-color: var(--green);
+  color: #fff;
+}
+.button--operator {
+  color: var(--green);
+}
+.button--clear {
+  color: #fa4353;
+}
+
+/* adding hower and active effects to buttons */
+
+button:hover {
+  opacity: 0.75;
+}
+button:active {
+  font-size: 1.25rem;
+
+  opacity: 1;
+  filter: brightness(0.9);
+}

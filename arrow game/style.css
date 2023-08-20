@@ -1,0 +1,66 @@
+/* table of contetnts
+
+*/
+
+/*==========
+    resets
+  ==========*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+body {
+  min-height: 100vh;
+  font-family: 'roboto', sans-serif;
+}
+
+:root {
+  --purple: #7f58af;
+  --blue: #64c5eb;
+  --magenta: #e84d8a;
+  --yellow: #feb326;
+
+  --primary-color: #e19898;
+  --secondary-color: #a2678a;
+  --color3: #4d3c77;
+  --color4: #3f1d38;
+}
+
+/* global styles */

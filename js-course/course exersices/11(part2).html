@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ----------------- 11.o -----------------
+      function search(array) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === 'search' || array[i] === 'Search') {
+            console.log(i);
+            continue;
+          } else if (i < array.length - 1) {
+            continue;
+          } else {
+            console.log(-1);
+          }
+        }
+      }
+      // search(['2134124', 'ajposdjh', 'Sear', 'search', 'ghs', 'search']);
+      // search('1234', '444');
+
+      // ----------------- 11.p -----------------
+      function search2(array) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === 'search' || array[i] === 'Search') {
+            console.log(i);
+            break;
+          } else if (i < array.length - 1) {
+            continue;
+          } else {
+            console.log(-1);
+          }
+        }
+      }
+      // search2(['2134124', 'ajposdjh', 'Sear', 'search', 'ghs', 'search']);
+      // search2('1234', '444');
+
+      // ----------------- 11.q -----------------
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      // console.log(findIndex(['12344', 'go', 'hello', 'hello'], 'hello'));
+      // console.log(findIndex(['123', 'hello'], 'hello'));
+
+      // --------------- 11.r & s & t ---------------
+
+      // function removeEgg(array) {
+      //   for (let i = 0; i < array.length; i++) {
+      //     if (array[i] === 'egg') {
+      //       array.splice(i, 1);
+      //     }
+      //   }
+      //   console.log(array);
+      // }
+      function removeEgg(array) {
+        const food = [];
+        let eggCount = 0;
+        array.reverse();
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === 'egg' && eggCount < 2) {
+            eggCount++;
+            continue;
+          } else {
+            food.push(array[i]);
+          }
+        }
+        food.reverse();
+        return food;
+      }
+      // console.log(removeEgg([124214, 'asdf', 'sfawr', 'egg', 'egg', 'apple', 'egg', 'asdffgaf']));
+
+      // ----------------- 11.v -----------------
+
+      // for (let i = 1; i <= 20; i++) {
+      //   if (i % 3 === 0 && i % 5 === 0) {
+      //     console.log('FizzBuzz');
+      //     continue;
+      //   } else if (i % 3 === 0) {
+      //     console.log('Fizz');
+      //     continue;
+      //   } else if (i % 5 === 0) {
+      //     console.log('Buzz');
+      //     continue;
+      //   }
+      //   console.log(i);
+      // }
+
+      // ----------------- 11.w -----------------
+      function unique(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          if (findIndex(result, array[i]) === -1) {
+            result.push(array[i]);
+          }
+        }
+        return result;
+      }
+      console.log(unique(['red', 'green', 'red', 'red', 'blue', 'green']));
+    </script>
+  </body>
+</html>

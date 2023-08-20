@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      button {
+        box-sizing: border-box;
+        width: 7rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+        background-color: #eee;
+        border: 1px solid #333;
+        cursor: pointer;
+      }
+      .is-toggled {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="gaming" onclick="toggled('.gaming');">Gaming</button>
+    <button class="music" onclick="toggled('.music');" style="margin: 0 2em">Music</button>
+    <button class="tech" onclick="toggled('.tech');">Tech</button>
+    <script>
+      function toggled(selector) {
+        const button = document.querySelector(selector);
+        if (!button.classList.contains('is-toggled')) {
+          turnOffPreviousButton()
+
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
+      };
+      function turnOffPreviousButton() {
+        if (document.querySelector('.is-toggled')){
+          document.querySelector('.is-toggled').classList.remove('is-toggled');
+        };
+      };
+    </script>
+  </body>
+</html>

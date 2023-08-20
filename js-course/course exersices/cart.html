@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cart</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: arial;		
+		}
+		body{
+			display: flex;
+			justify-content: center;
+		}
+		main{
+			display: flex;
+			flex-direction: column;
+			margin: 3em 0;
+
+		}
+		h1{
+			font-size: 1.25rem;
+			color: orange;
+			margin : 0 auto 1em auto;
+		}
+
+		.buttons--main button{
+			font-size: 1rem;
+			padding: 0.25em 0.5em;
+			margin-right: 0.5em;
+			border-radius: 2em;
+			background-color: yellow;
+			color: #333;
+			border: 1px solid #333;
+		}
+		.buttons--negative button,
+		.buttons button{
+			padding: 0.375em;
+			font-size: 1rem;
+			border-radius: 2em;
+			margin-right: 0.5em;
+			color: #333;
+			background-color: lime;
+			width: 18px;
+			border: 1px solid #333;
+			box-sizing: content-box;
+		}
+		.buttons--negative button{
+			background-color: purple;
+			color : white;
+		}
+		.buttons--main,
+		.buttons--negative,
+		.buttons{
+			display: flex;
+			margin-bottom: 1.5em;
+			justify-content: center;
+		}
+
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Your cart</h1>
+		<div class="buttons--main">
+			<button onclick="
+				console.log('items in cart: ' + cartQuantity);
+			">View count of items</button>
+			<button onclick="
+				cartQuantity = 0;
+				console.log('Your cart is empty');
+				console.log('items in cart: ' + cartQuantity);
+			">Reset your cart</button>
+		</div>
+		<div class="buttons">
+			<button onclick="
+				cartQuantity ++;
+				
+				addToCart();
+			">+1</button>
+			<button onclick="
+				cartQuantity += 2;
+				
+				addToCart();
+			">+2</button>
+			<button onclick="
+				cartQuantity += 3;
+				
+				addToCart();
+			">+3</button>
+			<button onclick="
+				cartQuantity += 4;
+				
+				addToCart();
+			">+4</button>	
+			<button onclick="
+				cartQuantity += 5;
+				
+				addToCart();
+			">+5</button>		
+		</div>
+		<div class="buttons--negative">
+			<button onclick="
+				cartQuantity --;
+				
+				removeFromCart()
+			">-1</button>
+			<button onclick="
+				cartQuantity -= 2;
+				
+				removeFromCart()
+			">-2</button>
+			<button onclick="
+				cartQuantity -= 3;
+				
+				removeFromCart()
+			">-3</button>
+			<button onclick="
+				cartQuantity -= 4;
+				
+				removeFromCart()
+			">-4</button>
+			<button onclick="
+				cartQuantity -= 5;
+				
+				removeFromCart()
+			">-5</button>
+		</div>
+	</main>
+	<script type="text/javascript">
+		let cartQuantity = 0;
+		function addToCart() {
+			if ( cartQuantity > 10 ) {
+				console.log('Your cart is full (max 10 items)');
+				cartQuantity = 10;
+			} else {
+				console.log('items in cart: ' + cartQuantity);
+			};
+		};
+
+		function removeFromCart() {
+			if (cartQuantity < 0) {
+				cartQuantity = 0;
+			};
+		
+			console.log('items in cart: ' + cartQuantity);
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

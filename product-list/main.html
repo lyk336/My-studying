@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Product list</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">My product list</h1>
+      <div class="product input-line">
+        <input
+          type="text"
+          id="product__name"
+          placeholder="product name"
+          minlength="1"
+          maxlength="30"
+        />
+        <input type="number" min="1" id="product__count" placeholder="count" />
+        <button id="product__add">add</button>
+      </div>
+      <ul class="list" name="product-list"></ul>
+      <ul class="empty-list" id="empty-list"></ul>
+      <div class="bottom-line"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

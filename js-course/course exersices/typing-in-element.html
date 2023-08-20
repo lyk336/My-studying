@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="Enter price for calculate"
+      onkeydown="
+		if (event.key === 'Enter') {
+			nameIs()
+		}
+	"
+    />
+    <button
+      onclick="
+		nameIs()
+	"
+    >
+      Submit
+    </button>
+    <p class="js-result"></p>
+
+    <hr />
+
+    <input
+      class="js-typing-input" type="text" onkeydown="
+				typingAnimation();
+      "/>
+    <p class="js-typing-display"></p>
+
+    <script>
+      function nameIs() {
+        let priceElement = document.querySelector('input').value;
+        if (!Number(priceElement)) {
+          document.querySelector('.js-result')
+            .innerText = 'Invalid value';
+          return;
+        } else if (priceElement < 40) {
+          priceElement = (priceElement * 100 + 1000) / 100;
+
+          document.querySelector('.js-result').innerText = `$${priceElement}`;
+        } else {
+          document.querySelector('.js-result')
+            .innerText = `$${priceElement}`;
+        };
+      };
+        // ---------------------- //
+      function typingAnimation() {
+        let onDisplay = document.querySelector('.js-typing-input')
+          .value;
+        // console.log(onDisplay);
+        let message = event.key;
+        if (message.length === 1) {
+          onDisplay = onDisplay + message;
+        } else if (message === 'Backspace') {
+          onDisplay = onDisplay.slice(0, -1);
+        } else {
+          return;
+        };
+        document.querySelector('.js-typing-display')
+        .innerText = onDisplay;
+        // console.log(message);
+        
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+/* table of contetnts
+ 
+0. resets
+
+1. header styling
+
+2. navbar styling
+  2.1. nav bar parts
+  2.2. buttons styling
+  2.3. user's account
+
+3. main grid
+  3.1. card styling
+  3.2. adding hover and active effects
+
+*/
+
+/*==========
+    resets
+  ==========*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+body {
+  min-height: 100vh;
+  font-family: "roboto", sans-serif;
+}
+
+:root {
+  --dark-color: #333;
+}
+/*==================
+    header styling
+  ==================*/
+header {
+  position: relative;
+
+  aspect-ratio: 4/1;
+  background-image: url(../images/else/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.header__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "chewy", cursive;
+  font-size: max(1.5rem, calc(0.25rem + 5vw));
+  text-align: center;
+  color: #efd09e;
+
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+/*==================
+    navbar styling
+  ==================*/
+/*-----------------
+    nav bar parts
+  ------------------*/
+nav {
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: max(1.375em + 2vw, 3.125em);
+
+  background-image: url(../images/else/nav-background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.nav__left-block {
+  padding: 0 0 0 1em;
+}
+.nav__user-data {
+  padding: 0 2em 0 0;
+}
+nav,
+.nav__left-block,
+.nav__user-data {
+  display: flex;
+  align-items: center;
+}
+.nav__burger-menu {
+  display: none;
+}
+
+/*------------------
+    buttons styling
+  ------------------*/
+.nav__button {
+  height: max(0.5em + 2vw, 2em);
+  padding: 0 1.25em;
+  margin: 0 1em;
+  background-color: #efd09e;
+  border: 4px solid #d4aa7d;
+
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--dark-color);
+  font-weight: 700;
+
+  border-radius: 10px;
+  transition: filter 0.15s ease-in-out, scale 0.1s ease-in-out;
+}
+.nav__burger-menu {
+  align-items: center;
+  margin-left: 2em;
+  background: none;
+
+  font-size: 1rem;
+  height: 2.5em;
+}
+.nav__burger-menu img {
+  height: 2.5em;
+  padding: 0.25em;
+  border: 4px solid #d4aa7d;
+  background-color: #efd09e;
+  border-radius: 10em;
+
+  user-select: none;
+}
+
+/*----------------------------------------
+    adding burger menu for smaller sizes
+  ----------------------------------------*/
+@media (max-width: 63.75em) {
+  .nav__left-block {
+    display: none;
+  }
+  .nav__burger-menu {
+    display: flex;
+  }
+}
+/*------------------
+    user's account
+  ------------------*/
+.user {
+  display: flex;
+  align-items: center;
+}
+.user button {
+  background: none;
+  height: 2.5em;
+
+  font-size: 1rem;
+
+  transition: filter 0.15s ease-in-out, scale 0.1s ease-in-out;
+}
+.user__avatar {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #fff;
+
+  border-radius: 1.25em;
+  object-fit: contain;
+}
+.user__money {
+  position: relative;
+
+  width: 8.75em;
+  min-height: 2.5em;
+  padding: 0.375em 1.5em 0.375em 3.75em;
+  margin-right: 2em;
+  background-color: #efd09e;
+  background-image: url(../images/icons/coin.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0.25em;
+  border: 4px solid #d4aa7d;
+  border-radius: 100px;
+
+  text-align: center;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+.user__money::before {
+  content: "";
+
+  position: absolute;
+  left: 2.5em;
+  top: -0.125em;
+
+  width: 4px;
+  height: 2.25em;
+  background-color: #d4aa7d;
+}
+
+/*-----------------------------------
+    adding hover and active effects
+  -----------------------------------*/
+.nav__left-block button:hover {
+  filter: brightness(1.1);
+}
+.nav__left-block button:active,
+.user button:active,
+.nav__burger-menu:active {
+  filter: brightness(0.85);
+  scale: 95%;
+}
+
+/*=============
+    main grid 
+  =============*/
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 3em;
+
+  padding: 3.125em max(50px, 5vw);
+}
+
+/*----------------
+    card styling
+  ----------------*/
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 28em;
+  margin: 0 auto;
+  background-color: #d4aa7d;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+}
+.card__name {
+  margin: 0.75rem 0;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.card__image {
+  width: calc(100% - 2em);
+  margin-bottom: 0.625em;
+  background-color: #fff;
+  border: 1px solid var(--dark-color);
+}
+.card,
+.card__image {
+  border-radius: 16px;
+}
+.card__description {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 2em);
+  padding: 0 0.5em;
+  background-color: #efd09e;
+
+  font-size: 1em;
+
+  border-radius: 16px;
+}
+.card__parameter {
+  display: flex;
+  align-items: center;
+
+  color: var(--dark-color);
+  font-weight: 700;
+}
+.card__parameter img {
+  width: 3em;
+  margin: 0.5em 1em 0.5em 0;
+  border-width: 4px;
+  border-style: solid;
+
+  border-radius: 1.5em;
+}
+.card__parameter--strength {
+  background-color: #e63d63;
+  border-color: #ba293d;
+}
+.card__parameter--magic {
+  background-color: #ec6ee6;
+  border-color: #c31d97;
+}
+.card__parameter--health {
+  background-color: #ffa9b0;
+  border-color: #ef8291;
+}
+.card__parameter--defense {
+  background-color: #c9996e;
+  border-color: #ac6c34;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+
+  margin: 0.5em 0;
+  padding: 0.25em 1em;
+  background-color: #98dd96;
+  border: 4px solid #75c56d;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--dark-color);
+
+  border-radius: 100em;
+}
+.card__price::before {
+  content: "";
+
+  display: flex;
+
+  margin-right: 0.25em;
+  margin-left: -0.125em;
+  width: 1.5em;
+  height: 1.5em;
+
+  background-image: url(../images/icons/coin.png);
+  background-size: 1.5em;
+}
+
+/*-----------------------------------
+    adding hover and active effects 
+  -----------------------------------*/
+.card__price:hover {
+  background-color: #90d28f;
+  border-color: #6fbb68;
+}
+.card__price:active {
+  background-color: #81bc80;
+  border-color: #63a75d;
+}
+.card:hover {
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.7);
+}

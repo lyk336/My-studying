@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced functions</title>
+  </head>
+  <body>
+    <button id="c">Start</button>
+    <button id="e">Add to cart</button>
+    <p class="e"></p>
+    <div>
+      <button id="add">Add</button>
+      <button id="remove">Remove</button>
+    </div>
+    <script>
+      // ----------------- 12.a -----------------
+      const add = function () {
+        console.log(2 + 3);
+      };
+      // add();
+      // add();
+
+      // ----------------- 12.b -----------------
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+      runTwice(function () {
+        console.log('12b');
+      });
+      runTwice(add);
+
+      // ---------------- 12.c & d ----------------
+      document.getElementById('c').addEventListener('click', () => {
+        document.getElementById('c').innerText = 'Loading...';
+        setTimeout(() => {
+          document.getElementById('c').innerText = 'Finished';
+        }, 1000);
+      });
+
+      // ---------------- 12.e & f ----------------
+      let timeOutId1;
+      document.getElementById('e').addEventListener('click', () => {
+        document.querySelector('.e').innerText = 'Added';
+        clearTimeout(timeOutId1);
+        timeOutId1 = setTimeout(() => {
+          document.querySelector('.e').innerText = '';
+        }, 2000);
+      });
+
+      // ---------------- 12.g & h ----------------
+      let numberOfMessages = 2;
+      setInterval(() => {
+        if (document.title === 'Advanced functions') {
+          document.title = `(${numberOfMessages}) New messages`;
+        } else {
+          document.title = 'Advanced functions';
+        }
+      }, 2000);
+      document.getElementById('add').addEventListener('click', () => {
+        numberOfMessages++;
+      });
+      document.getElementById('remove').addEventListener('click', () => {
+        numberOfMessages--;
+        if (numberOfMessages < 0) {
+          numberOfMessages = 0;
+        }
+      });
+    </script>
+  </body>
+</html>

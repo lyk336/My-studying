@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+  <script>
+  	function convertTemperature(degrees, unit) {
+  		if ( unit === 'C' || unit === 'c' ) {
+
+   			celsiusToFahrenheit(degrees);
+
+  		} else if ( unit === 'F' || unit === 'f' ) {
+
+  			fahrenheitToCelsius(degrees);
+
+  		} else if ( !unit ) {
+
+  			console.log('Enter unit to convert');
+
+  		}; 
+  	}
+
+    function celsiusToFahrenheit(celsius) {
+    	const temperature = celsius * 9 / 5 + 32;
+    	
+    	console.log( temperature );
+    };
+    function fahrenheitToCelsius(fahrenheit) {
+    	const temperature = (fahrenheit - 32) * 5 / 9;
+    	
+    	console.log( temperature );
+    };
+    
+    convertTemperature( 70, 'c');
+  </script>
+</body>
+</html>

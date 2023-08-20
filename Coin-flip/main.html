@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Coin flip</title>
+  </head>
+  <body>
+    <main>
+      <div id="coins" class="coins">
+        <div class="heads"></div>
+        <div class="tails"></div>
+      </div>
+      <div class="interface">
+        <div class="choice">
+          <h1 class="choice__title">Make your choice</h1>
+          <div class="choice__buttons">
+            <button id="heads">heads</button>
+            <button id="tails">tails</button>
+          </div>
+          <p id="choice__result" class=""></p>
+        </div>
+        <div class="score">
+          <h2 class="score__title">Your score: <span id="score">0</span></h2>
+          <button id="reset" class="score__reset">reset score</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
