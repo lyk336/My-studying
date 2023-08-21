@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <title>Pop the balloons</title>
+  </head>
+  <body>
+    <header>
+      <p class="best-score">Your best score: <span id="best-score">0</span></p>
+      <div class="tips">?</div>
+    </header>
+    <main>
+      <div class="title">
+        <h1>Start popping balloons!</h1>
+        <button id="start-game" class="start-game">Start</button>
+      </div>
+
+      <!-- game field -->
+      <div class="field invisible"></div>
+
+      <!-- different info about game -->
+      <div class="result invisible">
+        <p class="total-score">Total score: <span id="score">0</span></p>
+        <button id="play-again" class="play-again invisible">Play again</button>
+      </div>
+      <div class="game-statistics invisible">
+        <p class="count">(round <span id="round">1</span>) <span id="balloon-count">12</span> balloons left!</p>
+        <p>time left: <span id="timer">0</span>s</p>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

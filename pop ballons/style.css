@@ -1,0 +1,297 @@
+/* table of contetnts
+
+*/
+
+/*==========
+    resets
+  ==========*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+body {
+  min-height: 100vh;
+  font-family: 'roboto', sans-serif;
+  /* background-color: #4a4a4f; */
+}
+
+:root {
+  --blue: #64c5eb;
+  --purple: #7f58af;
+  --yellow: #feb326;
+  --magenta: #e84d8a;
+
+  --primary-color: #e19898;
+  --secondary-color: #a2678a;
+  --dark-primary-color: #4d3c77;
+  --dark-secondary-color: #3f1d38;
+}
+
+/* global styles */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* width: 30rem; */
+  width: max(80dvw, 28rem);
+  margin: auto;
+  height: calc(100vh - 10rem);
+}
+
+/* header styling */
+header {
+  display: flex;
+  justify-content: right;
+
+  max-height: 5rem;
+  padding: 2rem 2rem 0 0;
+}
+.best-score,
+.tips {
+  background-color: var(--dark-primary-color);
+  border: var(--primary-color) 0.25rem solid;
+  border-radius: 10rem;
+
+  color: var(--primary-color);
+}
+.best-score {
+  padding: 0.5rem 1rem;
+
+  font-size: 1.25rem;
+}
+.tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3rem;
+  height: 3rem;
+  margin-left: 2rem;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+/* title styling */
+.title,
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem 0;
+  border-top: var(--dark-secondary-color) 1px dashed;
+  border-bottom: var(--dark-secondary-color) 1px dashed;
+}
+.title {
+  height: 10rem;
+}
+.title h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.start-game,
+.play-again {
+  background-color: var(--dark-primary-color);
+  padding: 0.75rem 1.5rem;
+  border: var(--primary-color) 0.25rem solid;
+
+  font-size: 1.5rem;
+  color: var(--primary-color);
+
+  border-radius: 10rem;
+}
+.play-again:hover,
+.start-game:hover {
+  filter: brightness(0.9);
+}
+.play-again:active,
+.start-game:active {
+  filter: brightness(1);
+  opacity: 0.8;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+.result button {
+  margin-top: 2rem;
+}
+/* game field styling */
+.field {
+  flex-direction: row;
+  justify-content: left;
+
+  height: 8rem;
+  padding-left: 50%;
+}
+
+/* styling all types of balloons */
+.balloon {
+  display: none;
+
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: clamp(0px, 1%, 1.5rem);
+
+  transform: translateX(-50%);
+  border-radius: 100rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 3.5rem;
+}
+.left {
+  background-color: var(--blue);
+  background-image: url(images/left-arrow.png);
+}
+.right {
+  background-color: var(--purple);
+  background-image: url(images/right-arrow.png);
+}
+.top {
+  background-color: var(--magenta);
+  background-image: url(images/top-arrow.png);
+}
+.bottom {
+  background-color: var(--yellow);
+  background-image: url(images/bottom-arrow.png);
+}
+
+.bomb-left {
+  background-color: var(--blue);
+  background-image: url(images/bomb-left.png);
+}
+.bomb-right {
+  background-color: var(--purple);
+  background-image: url(images/bomb-right.png);
+}
+.bomb-top {
+  background-color: var(--magenta);
+  background-image: url(images/bomb-top.png);
+}
+.bomb-bottom {
+  background-color: var(--yellow);
+  background-image: url(images/bomb-bottom.png);
+}
+
+/*  game statistic styling */
+.total-score,
+.game-statistics {
+  font-size: 1.25rem;
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
+.game-statistics {
+  text-align: center;
+  margin-top: 2rem;
+}
+.count {
+  margin-bottom: 0.5rem;
+}
+
+.invisible {
+  display: none;
+}
+
+/* number of balloons on page */
+.field div:nth-child(1),
+.field div:nth-child(2),
+.field div:nth-child(3),
+.field div:nth-child(4) {
+  display: block;
+}
+.field div:nth-child(4) {
+  margin: 0;
+}
+@media (max-width: 48.75em) {
+  .balloon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@media (min-width: 57em) {
+  .field div:nth-child(4) {
+    margin-right: clamp(0px, 1%, 1.5rem);
+  }
+  .field div:nth-child(5) {
+    display: block;
+  }
+}
+@media (min-width: 63em) {
+  .field div:nth-child(4),
+  .field div:nth-child(5) {
+    display: block;
+    margin-right: clamp(0px, 1%, 1.5rem);
+  }
+  .field div:nth-child(6) {
+    display: block;
+    margin: 0;
+  }
+}
+@media (min-width: 77em) {
+  .field div:nth-child(5),
+  .field div:nth-child(6) {
+    margin-right: clamp(0px, 1%, 1.5rem);
+    display: block;
+  }
+
+  .field div:nth-child(7) {
+    display: block;
+    margin: 0;
+  }
+}
+@media (min-width: 90.75em) {
+  .field div:nth-child(6),
+  .field div:nth-child(7) {
+    margin-right: clamp(0px, 1%, 1.5rem);
+    display: block;
+  }
+
+  .field div:nth-child(8) {
+    display: block;
+    margin: 0;
+  }
+}
