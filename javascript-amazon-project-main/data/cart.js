@@ -13,7 +13,7 @@ if (!cart) {
   ];
 }
 
-function saveToStorage() {
+export function saveToStorage() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
@@ -50,4 +50,10 @@ export function removeFromCart(productId) {
   cart = newCart;
 
   saveToStorage();
+}
+
+export function itemsInCart() {
+  let count = 0;
+  cart.forEach((cartItem) => (count += cartItem.quantity));
+  return count;
 }
